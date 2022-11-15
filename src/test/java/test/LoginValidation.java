@@ -21,6 +21,13 @@ public class LoginValidation extends BaseTest{
 		login.loginWithCredentials(username, password);
 	}
 	
+	@Parameters({"validUsername", "validPassword"})
+	@Test
+	public void validUsernameValidPasswordTest2(String username, String password) {
+		Login login = new Login(driver);
+		login.loginWithCredentials(username, password);
+	}
+	
 	@Parameters({"invalidUsername", "validPassword"})
 	@Test
 	public void invalidUsernameValidPasswordTest(String username, String password) {
